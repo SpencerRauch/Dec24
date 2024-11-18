@@ -59,3 +59,23 @@ foreach (KeyValuePair<string,int> entry in PetAges)
     
 }
 PetAges.Add("Bob",9);
+
+static void SomeLogging()
+{
+    Console.WriteLine("Here is my log");
+    
+}
+
+// SomeLogging();
+// SomeLogging();
+// SomeLogging();
+
+
+static int DoSomeMath(int numOne, int numTwo=7)
+{
+    return numOne * numTwo + numOne / numTwo;
+}
+
+
+Console.WriteLine(DoSomeMath(8,6));
+DoSomeMath(4);
