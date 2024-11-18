@@ -1,0 +1,15 @@
+C:\stacks\CSharp\Dec24\Fundamentals\bin\Debug\net8.0\Fundamentals.exe
+C:\stacks\CSharp\Dec24\Fundamentals\bin\Debug\net8.0\Fundamentals.deps.json
+C:\stacks\CSharp\Dec24\Fundamentals\bin\Debug\net8.0\Fundamentals.runtimeconfig.json
+C:\stacks\CSharp\Dec24\Fundamentals\bin\Debug\net8.0\Fundamentals.dll
+C:\stacks\CSharp\Dec24\Fundamentals\bin\Debug\net8.0\Fundamentals.pdb
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\Fundamentals.GeneratedMSBuildEditorConfig.editorconfig
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\Fundamentals.AssemblyInfoInputs.cache
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\Fundamentals.AssemblyInfo.cs
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\Fundamentals.csproj.CoreCompileInputs.cache
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\Fundamentals.sourcelink.json
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\Fundamentals.dll
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\refint\Fundamentals.dll
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\Fundamentals.pdb
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\Fundamentals.genruntimeconfig.cache
+C:\stacks\CSharp\Dec24\Fundamentals\obj\Debug\net8.0\ref\Fundamentals.dll
