@@ -24,6 +24,11 @@ class ListNode {
         this.next = null;
     }
 }
+
+// example to declare a new node
+
+let newNode = new ListNode(9);
+
 /**
    * This class keeps track of the start (head) of the list and to store all the
    * functionality (methods) that each list should have.
@@ -46,7 +51,7 @@ class SinglyLinkedList {
      * @returns {boolean}
      */
     isEmpty() {
-        //your code here
+        return this.head == null;
     }
     /**
      * Creates a new node with the given data and inserts it at the back of
@@ -58,6 +63,7 @@ class SinglyLinkedList {
      */
     insertAtBack(data) {
         //your code here
+        return this;
     }
     /**
      * Creates a new node with the given data and inserts it at the back of
