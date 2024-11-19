@@ -62,7 +62,16 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     insertAtBack(data) {
-        //your code here
+        let newBack = new ListNode(data);
+        if (this.isEmpty()){
+            this.head = newBack;
+            return this;
+        }
+        let runner = this.head;
+        while (runner.next){
+            runner = runner.next;
+        }
+        runner.next = newBack;
         return this;
     }
     /**
@@ -77,6 +86,15 @@ class SinglyLinkedList {
      */
     insertAtBackRecursive(data, runner = this.head) {
         //your code here
+        if(this.head == null){
+            this.head = new ListNode(data);
+            return this;
+        }
+        if(runner.next == null){
+            runner.next = new ListNode(data);
+            return this
+        }
+        return this.insertAtBackRecursive(data, runner.next)
     }
     /**
      * Calls insertAtBack on each item of the given array.
