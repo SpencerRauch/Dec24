@@ -1,0 +1,15 @@
+C:\stacks\CSharp\Dec24\OOPLecture\bin\Debug\net8.0\OOPLecture.exe
+C:\stacks\CSharp\Dec24\OOPLecture\bin\Debug\net8.0\OOPLecture.deps.json
+C:\stacks\CSharp\Dec24\OOPLecture\bin\Debug\net8.0\OOPLecture.runtimeconfig.json
+C:\stacks\CSharp\Dec24\OOPLecture\bin\Debug\net8.0\OOPLecture.dll
+C:\stacks\CSharp\Dec24\OOPLecture\bin\Debug\net8.0\OOPLecture.pdb
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\OOPLecture.GeneratedMSBuildEditorConfig.editorconfig
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\OOPLecture.AssemblyInfoInputs.cache
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\OOPLecture.AssemblyInfo.cs
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\OOPLecture.csproj.CoreCompileInputs.cache
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\OOPLecture.sourcelink.json
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\OOPLecture.dll
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\refint\OOPLecture.dll
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\OOPLecture.pdb
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\OOPLecture.genruntimeconfig.cache
+C:\stacks\CSharp\Dec24\OOPLecture\obj\Debug\net8.0\ref\OOPLecture.dll
