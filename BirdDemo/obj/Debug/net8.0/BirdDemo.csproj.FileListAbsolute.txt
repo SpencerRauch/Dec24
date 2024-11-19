@@ -1,0 +1,15 @@
+C:\stacks\CSharp\Dec24\BirdDemo\bin\Debug\net8.0\BirdDemo.exe
+C:\stacks\CSharp\Dec24\BirdDemo\bin\Debug\net8.0\BirdDemo.deps.json
+C:\stacks\CSharp\Dec24\BirdDemo\bin\Debug\net8.0\BirdDemo.runtimeconfig.json
+C:\stacks\CSharp\Dec24\BirdDemo\bin\Debug\net8.0\BirdDemo.dll
+C:\stacks\CSharp\Dec24\BirdDemo\bin\Debug\net8.0\BirdDemo.pdb
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\BirdDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\BirdDemo.AssemblyInfoInputs.cache
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\BirdDemo.AssemblyInfo.cs
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\BirdDemo.csproj.CoreCompileInputs.cache
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\BirdDemo.sourcelink.json
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\BirdDemo.dll
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\refint\BirdDemo.dll
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\BirdDemo.pdb
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\BirdDemo.genruntimeconfig.cache
+C:\stacks\CSharp\Dec24\BirdDemo\obj\Debug\net8.0\ref\BirdDemo.dll
