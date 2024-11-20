@@ -24,11 +24,6 @@ class ListNode {
         this.next = null;
     }
 }
-
-// example to declare a new node
-
-let newNode = new ListNode(9);
-
 /**
    * This class keeps track of the start (head) of the list and to store all the
    * functionality (methods) that each list should have.
@@ -62,16 +57,16 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     insertAtBack(data) {
-        let newBack = new ListNode(data);
-        if (this.isEmpty()){
-            this.head = newBack;
+        let newEnd = new ListNode(data);
+        if (this.isEmpty()) {
+            this.head = newEnd;
             return this;
         }
         let runner = this.head;
-        while (runner.next){
+        while (runner.next !== null) {
             runner = runner.next;
         }
-        runner.next = newBack;
+        runner.next = newEnd;
         return this;
     }
     /**
@@ -85,16 +80,15 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     insertAtBackRecursive(data, runner = this.head) {
-        //your code here
-        if(this.head == null){
+        if (this.head === null) {
             this.head = new ListNode(data);
             return this;
         }
-        if(runner.next == null){
+        if (runner.next === null) {
             runner.next = new ListNode(data);
-            return this
+            return this;
         }
-        return this.insertAtBackRecursive(data, runner.next)
+        return this.insertAtBackRecursive(data, runner.next);
     }
     /**
      * Calls insertAtBack on each item of the given array.
@@ -124,19 +118,34 @@ class SinglyLinkedList {
         }
         return arr;
     }
+    /**
+     * Creates a new node with the given data and inserts that node at the front
+     * of this list.
+     * - Time: (?).
+     * - Space: (?).
+     * @param {any} data The data for the new node.
+     * @returns {SinglyLinkedList} This list.
+     */
+    insertAtFront(data) {
+        //your code here
+    }
+    /**
+     * Removes the first node of this list.
+     * - Time: (?).
+     * - Space: (?).
+     * @returns {any} The data from the removed node or null if no first node.
+     */
+    removeHead() {
+        //Your code here
+    }
 }
-/******************************************************************* 
-Multiple test lists already constructed to test your methods on.
-Below commented code depends on insertAtBack method to be completed,
-after completing it, uncomment the code.
-*/
-const emptyList = new SinglyLinkedList();
-// const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-// const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
-// const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
-// const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
-// const unorderedList = new SinglyLinkedList().insertAtBackMany([
-// -5, -10, 4, -3, 6, 1, -7, -2,
-// ]);
-// Print your list like so:
-// console.log(firstThreeList.toArr());
+let testList = new SinglyLinkedList();
+testList.insertAtBackMany([10, 8, 12, 5, 15]);
+
+// ! insert at front test
+// testList.insertAtFront(999);
+// console.log(testList.toArr());
+
+// ! remove head test
+// testList.removeHead();
+// console.log(testList.toArr());
