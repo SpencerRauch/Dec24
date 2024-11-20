@@ -127,7 +127,10 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     insertAtFront(data) {
-        //your code here
+        let newHead = new ListNode(data);
+        newHead.next = this.head;
+        this.head = newHead;
+        return this;
     }
     /**
      * Removes the first node of this list.
@@ -136,7 +139,10 @@ class SinglyLinkedList {
      * @returns {any} The data from the removed node or null if no first node.
      */
     removeHead() {
-        //Your code here
+        if (this.isEmpty()) return null;
+        let removed = this.head;
+        this.head = this.head.next;
+        return removed.data;
     }
 }
 let testList = new SinglyLinkedList();
