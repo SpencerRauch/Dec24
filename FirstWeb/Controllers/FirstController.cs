@@ -46,6 +46,42 @@ public class FirstController : Controller   // Remember inheritance?
         return View("RazorFun");
     }
 
+    [HttpGet("form")]
+    public ViewResult FormPage()
+    {
+        return View();
+    }
+
+    // [HttpPost("process")]
+    // public RedirectResult ProcessForm(int id, string name)
+    // {
+    //     Console.WriteLine($"{name} supplied id {id}");
+        
+    //     return Redirect("form");
+    // }
+
+    // [HttpPost("process")]
+    // public RedirectToActionResult ProcessForm(int id, string name)
+    // {
+    //     Console.WriteLine($"{name} supplied id {id}");
+        
+    //     return RedirectToAction("ViewParams", new {id,name=name});
+    // }
+
+    [HttpPost("process")]
+    public IActionResult ProcessForm(int id, string name)
+    {
+        if (id == 123)
+        {
+            return View("SecretPage");
+        }
+        
+        return RedirectToAction("ViewParams", new {id,name=name});
+    }
+
+
+    
+
     [HttpGet("{**path}")]
     public string Lost()
     {
