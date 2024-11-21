@@ -1,0 +1,6 @@
+@model List<Pet>
+
+@foreach (Pet p in Model)
+{
+    <p>@p.Name @p.Species @p.Age</p>
+}
