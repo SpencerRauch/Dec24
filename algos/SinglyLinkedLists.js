@@ -154,6 +154,13 @@ class SinglyLinkedList {
     */
     contains(val) {
         //your code here
+        if (this.isEmpty()) return false
+        let runner = this.head;
+        while(runner){
+            if(runner.data == val) return true
+            runner = runner.next
+        }
+        return false
     }
     /**
      * Determines whether or not the given search value exists in this list recursively.
@@ -166,6 +173,9 @@ class SinglyLinkedList {
     */
     containsRecursive(val, current = this.head) {
         //Your code here
+        if (current == null) return false
+        if (current.data == val) return true
+        return this.containsRecursive(val,current.next)
     }
 }
 
