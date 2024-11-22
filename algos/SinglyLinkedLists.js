@@ -154,13 +154,13 @@ class SinglyLinkedList {
     */
     contains(val) {
         //your code here
-        if (this.isEmpty()) return false
+        if (this.isEmpty()) return false;
         let runner = this.head;
-        while(runner){
-            if(runner.data == val) return true
-            runner = runner.next
+        while (runner) {
+            if (runner.data == val) return true;
+            runner = runner.next;
         }
-        return false
+        return false;
     }
     /**
      * Determines whether or not the given search value exists in this list recursively.
@@ -173,28 +173,43 @@ class SinglyLinkedList {
     */
     containsRecursive(val, current = this.head) {
         //Your code here
-        if (current == null) return false
-        if (current.data == val) return true
-        return this.containsRecursive(val,current.next)
+        if (current == null) return false;
+        if (current.data == val) return true;
+        return this.containsRecursive(val, current.next);
+    }
+
+    /**
+* Retrieves the data of the second to last node in this list.
+* - Time: O(?).
+* - Space: O(?).
+* @returns {any} The data of the second to last node or null if there is no
+*    second to last node.
+*/
+    secondToLast() {
+        //Your code here
+    }
+    /**
+    * Removes the node that has the matching given val as it's data.
+    * - Time: O(?).
+    * - Space: O(?).
+    * @param {any} val The value to compare to the node's data to find the
+    *    node to be removed.
+    * @returns {boolean} Indicates if a node was removed or not.
+    */
+    removeVal(val) {
+        //Your code here
     }
 }
 
 const emptyList = new SinglyLinkedList();
-const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
-const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
-const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
-const unorderedList = new SinglyLinkedList().insertAtBackMany([
-    -5, -10, 4, -3, 6, 1, -7, -2,
-]);
+const testList = new SinglyLinkedList();
+testList.insertAtBackMany([10, 8, 12, 5, 15]);
 
-// ! contains
-console.log(emptyList.contains(0)); // Should be false
-console.log(unorderedList.contains(-2)); // Should be true
-console.log(firstThreeList.contains(1)); // Should be true
+// ! second to last test:
+// console.log(testList.secondToLast()) //should be 5
 
-// ! contains recursive
-console.log(emptyList.containsRecursive(0)); // Should be false
-console.log(unorderedList.containsRecursive(-2)); // Should be true
-console.log(firstThreeList.containsRecursive(1)); // Should be true
-
+// ! remove val test:
+// testList.removeVal(8);
+// testList.removeVal(15);
+// testList.removeVal(10);
+// console.log(testList.toArr()) // should be [12,15]
