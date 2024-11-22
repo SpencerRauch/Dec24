@@ -62,15 +62,36 @@ public class HomeController : Controller
         
         //a real database will work much like this!
         FakePetDb.Add(newPet);
+        HttpContext.Session.SetString("LastPet",newPet.Name);
         // FakePetDb.SaveChanges(); <-- this is the difference
 
-        return RedirectToAction("Result");
+        return RedirectToAction("Results");
     }
 
     [HttpGet("results")]
-    public ViewResult Result()
+    public IActionResult Results()
     {
+        string? LastPet = HttpContext.Session.GetString("LastPet");
+        if (LastPet == null)
+        {
+            return RedirectToAction("Index");
+        }
         return View(FakePetDb);
+    }
+
+    [HttpPost("set")]
+    public RedirectToActionResult SetFilter(int limit)
+    {
+        HttpContext.Session.SetInt32("Limit",limit);
+        return RedirectToAction("Results");
+    }
+
+    [HttpPost("clear")]
+    public RedirectToActionResult ClearFilter()
+    {
+        // HttpContext.Session.Clear();
+        HttpContext.Session.Remove("Limit");
+        return RedirectToAction("Results");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -187,6 +187,12 @@ class SinglyLinkedList {
     */
     secondToLast() {
         //Your code here
+        if (!this.head || !this.head.next) return null
+        let runner = this.head;
+        while(runner.next.next){
+            runner = runner.next
+        }
+        return runner.data
     }
     /**
     * Removes the node that has the matching given val as it's data.
@@ -197,7 +203,21 @@ class SinglyLinkedList {
     * @returns {boolean} Indicates if a node was removed or not.
     */
     removeVal(val) {
-        //Your code here
+        if(this.isEmpty())return false
+        if(this.head.data == val){
+            this.removeHead()
+            return true
+        }
+        let runner = this.head;
+
+        while(runner.next){
+            if (runner.next.data == val){
+                runner.next = runner.next.next
+                return true
+            }
+            runner = runner.next
+        }
+        return false
     }
 }
 
@@ -206,10 +226,10 @@ const testList = new SinglyLinkedList();
 testList.insertAtBackMany([10, 8, 12, 5, 15]);
 
 // ! second to last test:
-// console.log(testList.secondToLast()) //should be 5
+console.log(testList.secondToLast()) //should be 5
 
 // ! remove val test:
-// testList.removeVal(8);
-// testList.removeVal(15);
-// testList.removeVal(10);
-// console.log(testList.toArr()) // should be [12,5]
+testList.removeVal(8);
+testList.removeVal(15);
+testList.removeVal(10);
+console.log(testList.toArr()) // should be [12,5]
