@@ -212,4 +212,4 @@ testList.insertAtBackMany([10, 8, 12, 5, 15]);
 // testList.removeVal(8);
 // testList.removeVal(15);
 // testList.removeVal(10);
-// console.log(testList.toArr()) // should be [12,15]
+// console.log(testList.toArr()) // should be [12,5]
