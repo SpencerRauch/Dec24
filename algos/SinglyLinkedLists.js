@@ -179,12 +179,12 @@ class SinglyLinkedList {
     }
 
     /**
-* Retrieves the data of the second to last node in this list.
-* - Time: O(?).
-* - Space: O(?).
-* @returns {any} The data of the second to last node or null if there is no
-*    second to last node.
-*/
+    * Retrieves the data of the second to last node in this list.
+    * - Time: O(?).
+    * - Space: O(?).
+    * @returns {any} The data of the second to last node or null if there is no
+    *    second to last node.
+    */
     secondToLast() {
         //Your code here
     }
