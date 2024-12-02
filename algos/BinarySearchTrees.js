@@ -55,6 +55,10 @@ class BinarySearchTree {
      */
     min(current = this.root) {
         //Your code here
+        if (this.isEmpty()) return null
+        let runner = this.root;
+        while(runner.left) runner = runner.left
+        return runner.data
     }
     /**
      * Retrieves the smallest integer data from this tree or null if tree is empty.
@@ -66,6 +70,9 @@ class BinarySearchTree {
      */
     minRecursive(current = this.root) { 
         //Your code here
+        if (this.isEmpty()) return null
+        if (!current.left) return current.data
+        return this.minRecursive(current.left)
     }
     /**
      * Retrieves the largest integer data from this tree or null if tree is empty.
@@ -76,7 +83,10 @@ class BinarySearchTree {
      * @returns {number} The largest integer from this tree.
      */
     max(current = this.root) { 
-        //Your code here
+        if (this.isEmpty()) return null
+        let runner = this.root;
+        while(runner.right) runner = runner.right
+        return runner.data
     }
     /**
      * Retrieves the largest integer data from this tree or null if tree is empty.
@@ -87,7 +97,9 @@ class BinarySearchTree {
      * @returns {number} The largest integer from this tree.
      */
     maxRecursive(current = this.root) { 
-        //Your code here
+        if (this.isEmpty()) return null
+        if (!current.right) return current.data
+        return this.maxRecursive(current.right)
     }
     // Logs this tree horizontally with the root on the left.
     print(node = this.root, spaceCnt = 0, spaceIncr = 10) {
@@ -135,7 +147,7 @@ threeLevelTree.root.right = new BSTNode(15);
 threeLevelTree.root.right.left = new BSTNode(13);
 // threeLevelTree.print()
 //DAY ONE TESTS:
-// console.log(threeLevelTree.min()); //2
-// console.log(threeLevelTree.minRecursive()); //2
-// console.log(threeLevelTree.max()); //15
-// console.log(threeLevelTree.maxRecursive()); //15
+console.log(threeLevelTree.min()); //2
+console.log(threeLevelTree.minRecursive()); //2
+console.log(threeLevelTree.max()); //15
+console.log(threeLevelTree.maxRecursive()); //15
