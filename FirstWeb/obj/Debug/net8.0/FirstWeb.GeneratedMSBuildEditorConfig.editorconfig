@@ -9,31 +9,31 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FirstWeb
 build_property.RootNamespace = FirstWeb
-build_property.ProjectDir = C:\stacks\CSharp\Dec24\FirstWeb\
+build_property.ProjectDir = c:\stacks\CSharp\Dec24\FirstWeb\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\stacks\CSharp\Dec24\FirstWeb
+build_property.MSBuildProjectDirectory = c:\stacks\CSharp\Dec24\FirstWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/stacks/CSharp/Dec24/FirstWeb/Views/First/FormPage.cshtml]
+[c:/stacks/CSharp/Dec24/FirstWeb/Views/First/FormPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyc3RcRm9ybVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/stacks/CSharp/Dec24/FirstWeb/Views/First/RazorFun.cshtml]
+[c:/stacks/CSharp/Dec24/FirstWeb/Views/First/RazorFun.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyc3RcUmF6b3JGdW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/stacks/CSharp/Dec24/FirstWeb/Views/First/SecretPage.cshtml]
+[c:/stacks/CSharp/Dec24/FirstWeb/Views/First/SecretPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyc3RcU2VjcmV0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/stacks/CSharp/Dec24/FirstWeb/Views/First/ViewPage.cshtml]
+[c:/stacks/CSharp/Dec24/FirstWeb/Views/First/ViewPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyc3RcVmlld1BhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/stacks/CSharp/Dec24/FirstWeb/Views/First/ViewParams.cshtml]
+[c:/stacks/CSharp/Dec24/FirstWeb/Views/First/ViewParams.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyc3RcVmlld1BhcmFtcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
