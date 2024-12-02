@@ -1,4 +1,6 @@
-﻿List<VideoGame> Games = new()
+﻿using System.Net;
+
+List<VideoGame> Games = new()
 {
     new VideoGame("Apex Legends", "Riot", "E", 0, "Xbox, PC"),
     new VideoGame("The Last of Us", "Naughty Dog", "M", 39.99, "PlayStation"),
@@ -28,14 +30,42 @@
 };
 
 // Getting a single result based on criteria
+// VideoGame EldenRing = Games.First(g => g.Title == "Elden Rin"); //first will crash if no match 
+VideoGame? EldenRing = Games.FirstOrDefault(g => g.Title.Contains("Elfdfdden Rin"));
+if (EldenRing == null)
+{
+    Console.WriteLine("Not found");
+    
+} 
+else 
+{
+    Console.WriteLine(EldenRing);
+    
+}
+// Console.WriteLine(EldenRing);
+
+
 
 // Getting multiple results based on criteria
+List<VideoGame> AffordableGames = Games.Where( g => g.Price < 25).ToList();
+AffordableGames.ForEach(Console.WriteLine);
+IEnumerable<VideoGame> EnumGames = Games.Where( g => g.Price < 25);
+// EnumGames.ForEach(Console.WriteLine); // IENumerable does not containt ForEach method
+
 
 // Getting select pieces of data
+List<double> AffordablePrices = AffordableGames.Select(ag => ag.Price).ToList();
+List<double> JustThePricesFullQuery = Games.Where(g => g.Price < 25).Select(g => g.Price).ToList();
+AffordablePrices.ForEach(Console.WriteLine);
+
 
 // Ordering / Top 3
+List<VideoGame> SpendyOnes = Games.OrderByDescending(g => g.Price).Take(3).ToList();
+SpendyOnes.ForEach(Console.WriteLine);
 
 // Logical testing
+bool FreeGamesExist = Games.Any(g => g.Price == 0);
+bool ContrivedFreeGamesExist = !Games.All( g => g.Price != 0);
 
 Flavor Vanilla = new("Vanilla", false);
 Flavor Chocolate = new("Chocolate", false);
@@ -57,3 +87,8 @@ IceCreamStore Alexs = new("Alex Miller Goes Nuts",new(){RockyRoad,Spumoni,Peanut
 List<IceCreamStore> StoreDirectory = new(){Alices,Fionas,Carls,Bobs,Alexs};
 
 // nested queries 
+List<IceCreamStore> NutFreeStoreList = StoreDirectory.Where( s => s.AvailableFlavors.All(f => !f.ContainsNuts)).ToList();
+NutFreeStoreList.ForEach(Console.WriteLine);
+
+List<IceCreamStore> CookieStores = StoreDirectory.Where( s => s.AvailableFlavors.Any(f=>f.Name.Contains("Cookie"))).ToList();
+CookieStores.ForEach(Console.WriteLine);

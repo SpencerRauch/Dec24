@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\stacks\\CSharp\\Oct24\\LINQ\\LINQ.csproj": {}
+    "C:\\stacks\\CSharp\\Dec24\\LINQ\\LINQ.csproj": {}
   },
   "projects": {
-    "C:\\stacks\\CSharp\\Oct24\\LINQ\\LINQ.csproj": {
+    "C:\\stacks\\CSharp\\Dec24\\LINQ\\LINQ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\stacks\\CSharp\\Oct24\\LINQ\\LINQ.csproj",
+        "projectUniqueName": "C:\\stacks\\CSharp\\Dec24\\LINQ\\LINQ.csproj",
         "projectName": "LINQ",
-        "projectPath": "C:\\stacks\\CSharp\\Oct24\\LINQ\\LINQ.csproj",
+        "projectPath": "C:\\stacks\\CSharp\\Dec24\\LINQ\\LINQ.csproj",
         "packagesPath": "C:\\Users\\bizar\\.nuget\\packages\\",
-        "outputPath": "C:\\stacks\\CSharp\\Oct24\\LINQ\\obj\\",
+        "outputPath": "C:\\stacks\\CSharp\\Dec24\\LINQ\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bizar\\AppData\\Roaming\\NuGet\\NuGet.Config"

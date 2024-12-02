@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kQ26mERb3XGNoRUbPoAjaA2m4on1xxMrH4PLliXotTT2S/wwKbYwi2vKY8LitrBjDRstzOiIdet7+oDuxpIj0w==",
+  "dgSpecHash": "BJwE54wMOR3W0UhPIHU7RcUoG/XhNjOJvmvmN3u5f/c93FzpOpaCXg146CX4TpamNmquvwHbSygtRG6JrzRZZQ==",
   "success": true,
-  "projectFilePath": "C:\\stacks\\CSharp\\Oct24\\LINQ\\LINQ.csproj",
+  "projectFilePath": "C:\\stacks\\CSharp\\Dec24\\LINQ\\LINQ.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
