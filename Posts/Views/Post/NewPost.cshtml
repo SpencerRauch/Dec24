@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "New Post";
+}
+@model Post
+<h1>Add A New Post</h1>
+<form asp-action="CreatePost" asp-controller="Post" method="post" class="shadow p-3 rounded">
+    <div class="mb-3">
+        <label asp-for="Title"></label>
+        <input asp-for="Title">
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Body"></label>
+        <input asp-for="Body">
+        <span class="text-danger" asp-validation-for="Body"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImgURL"></label>
+        <input asp-for="ImgURL">
+        <span class="text-danger" asp-validation-for="ImgURL"></span>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,13 @@
+@model List<Post>
+
+@foreach (Post p in Model)
+{
+    <div class="shadow p-3 mb-3 text-center">
+        <h3>@p.Title</h3>
+        <p>@p.Body</p>
+        <img src="@p.ImgURL" alt="@p.Title">
+        <div class="d-flex justify-content-center align-items-center gap-1">
+            <a asp-route-postId="@p.PostId" asp-action="ViewPost" asp-controller="Post" class="btn btn-info">View Post</a>
+        </div>
+    </div>
+}
