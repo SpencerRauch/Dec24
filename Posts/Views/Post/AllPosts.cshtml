@@ -6,8 +6,14 @@
         <h3>@p.Title</h3>
         <p>@p.Body</p>
         <img src="@p.ImgURL" alt="@p.Title">
-        <div class="d-flex justify-content-center align-items-center gap-1">
+        <div class="d-flex justify-content-center align-items-center gap-1 mt-2">
             <a asp-route-postId="@p.PostId" asp-action="ViewPost" asp-controller="Post" class="btn btn-info">View Post</a>
+            <a asp-route-postId="@p.PostId" asp-action="EditPost" asp-controller="Post" class="btn btn-info">
+                Edit
+            </a>
+            <form asp-route-postId="@p.PostId" asp-action="DeletePost" asp-controller="Post" method="post">
+                <button class="btn btn-danger">Delete</button>
+            </form>
         </div>
     </div>
 }

@@ -19377,6 +19377,11 @@
       "FilePath": "c:\\stacks\\CSharp\\Dec24\\Posts\\Views\\Post\\ViewPost.cshtml",
       "TargetPath": "Views\\Post\\ViewPost.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\stacks\\CSharp\\Dec24\\Posts\\Views\\Post\\EditPost.cshtml",
+      "TargetPath": "Views\\Post\\EditPost.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.3"
