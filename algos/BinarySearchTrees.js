@@ -172,6 +172,27 @@ class BinarySearchTree {
      */
     insert(newVal) {
         //your code here
+        let newNode = new BSTNode(newVal);
+        if (this.isEmpty()){
+            this.root = newNode;
+            return this
+        } 
+        let runner = this.root;
+        while(true){
+            if (newVal < runner.data){
+                if (!runner.left){
+                    runner.left = newNode;
+                    return this
+                }
+                runner = runner.left
+            } else {
+                if (!runner.right){
+                    runner.right = newNode;
+                    return this
+                }
+                runner = runner.right
+            }
+        }
     }
 
     /**
@@ -186,6 +207,22 @@ class BinarySearchTree {
      */
     insertRecursive(newVal, curr = this.root) {
         //your code here
+        if (this.isEmpty()){
+            this.root = new BSTNode(newVal)
+            return this
+        }
+        if (newVal < curr.data){
+            if (!curr.left){
+                curr.left = new BSTNode(newVal)
+                return this
+            }
+            return this.insertRecursive(newVal, curr.left)
+        } 
+        if (!curr.right){
+            curr.right = new BSTNode(newVal)
+            return this
+        }
+        return this.insertRecursive(newVal, curr.right)
     }
 }
 
@@ -207,6 +244,7 @@ threeLevelTree.insert(6);
 threeLevelTree.insert(13);
 threeLevelTree.print();
 
+console.log("*****************************************")
 const threeLevelTree2 = new BinarySearchTree();
 threeLevelTree2.insertRecursive(10);
 threeLevelTree2.insertRecursive(5);
