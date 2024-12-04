@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Log in or Register";
+    Layout = "_NoNav";
+    int? UserId = Context.Session.GetInt32("UserId");
+    bool LoggedIn = UserId != null;
+}
+
+<div class="text-center">
+    <h1>Welcome!</h1>
+    <div class="row">
+        @await Html.PartialAsync("_Register", new User())
+        @await Html.PartialAsync("_Login", new LogUser())
+    </div>
+    @if(LoggedIn)
+    {
+        <a asp-action="AllPosts" asp-controller="Post" class="btn btn-warning">You're logged in, come on in!</a>
+    }
+</div>
