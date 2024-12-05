@@ -1,0 +1,17 @@
+@model User
+
+<h2>@Model.Name's profile!</h2>
+@foreach (Post p in Model.CreatedPosts)
+{
+        <div class="shadow p-3 mb-3 text-center">
+        <h3>@p.Title</h3>
+        <p>@p.Body</p>
+        <img src="@p.ImgURL" alt="@p.Title">
+        <div class="d-flex justify-content-center align-items-center gap-1 mt-2">
+            <a asp-action="EditPost" asp-controller="Post" class="btn btn-info" asp-route-postId="@p.PostId">Edit</a>
+            <form asp-action="DeletePost" asp-controller="Post" asp-route-postId="@p.PostId" method="post">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+}

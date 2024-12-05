@@ -23,7 +23,13 @@ public class Post
     public string? ImgURL { get;set; }
 
     public DateTime CreatedAt {get;set;} = DateTime.Now;
-    public DateTime UpdatedAt {get;set;} = DateTime.Now;   
+    public DateTime UpdatedAt {get;set;} = DateTime.Now;
+
+    //fk
+    public int UserId { get;set; }
+
+    //nav prop
+    public User? PostingUser { get;set; }
 
 
 }

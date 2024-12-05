@@ -31,6 +31,9 @@ public class User
     [DataType(DataType.Password)]
     [Compare("Password")]
     public string ConfirmPassword { get; set; }
+
+    //nav prop
+    public List<Post> CreatedPosts { get;set; } = [];
 }
 
 

@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Posts.Models;
 
 namespace Posts.Controllers;
@@ -76,6 +77,19 @@ public class UserController : Controller
         // HttpContext.Session.Clear();
         HttpContext.Session.Remove("UserId");
         return RedirectToAction("Index");
+    }
+
+    [SessionCheck]
+    [HttpGet("users/profile")]
+    public IActionResult Profile()
+    {
+        int LoggedId = (int)HttpContext.Session.GetInt32("UserId");
+        User? LoggedUser = _context.Users.Include(u => u.CreatedPosts).FirstOrDefault(u => u.UserId == LoggedId);
+        if (LoggedUser == null)
+        {
+            return Logout();
+        }
+        return View(LoggedUser);
     }
 
 

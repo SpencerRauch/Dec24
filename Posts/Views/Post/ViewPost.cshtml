@@ -1,7 +1,21 @@
+@{
+    int UserId = (int)Context.Session.GetInt32("UserId");
+    bool OurPost = UserId == Model.UserId;
+}
+
 @model Post
 
     <div class="shadow p-3 mb-3 text-center">
         <h3>@Model.Title</h3>
         <p>@Model.Body</p>
         <img src="@Model.ImgURL" alt="@Model.Title">
+        <div class="d-flex justify-content-center align-items-center gap-1 mt-2">
+        @if(OurPost)
+        {
+            <a asp-action="EditPost" asp-controller="Post" class="btn btn-info" asp-route-postId="@Model.PostId">Edit</a>
+            <form asp-action="DeletePost" asp-controller="Post" asp-route-postId="@Model.PostId" method="post">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+        }
+        </div>
     </div>
