@@ -281,10 +281,23 @@ class BinarySearchTree {
         return vals
     }
 
+
+    /**
+         * BFS order: horizontal rows top-down left-to-right.
+         * Converts this BST into an array following Breadth First Search order.
+         * Example on the fullTree var:
+         * [25, 15, 50, 10, 22, 35, 70, 4, 12, 18, 24, 31, 44, 66, 90]
+         * @param {Node} current The current node during the traversal of this tree.
+         * @returns {Array<number>} The data of all nodes in BFS order.
+         */
+    toArrLevelorder(current = this.root) {
+        //your code here
+    }
+
+
 }
 
 
-/***************** Uncomment after insert method is created. ****************/
 const fullTree = new BinarySearchTree();
 fullTree
     .insert(25)
@@ -304,20 +317,15 @@ fullTree
     .insert(90);
 
 /* fullTree
-                    root
-                <-- 25 -->
-              /            \
-            15             50
-          /    \         /    \
-        10     22      35     70
-      /   \   /  \    /  \   /  \
-    4    12  18  24  31  44 66  90
+                root
+            <-- 25 -->
+          /            \
+        15             50
+      /    \         /    \
+    10     22      35     70
+  /   \   /  \    /  \   /  \
+4    12  18  24  31  44 66  90
 
 */
 
-fullTree.print();
-
-
-console.log(fullTree.toArrInorder(), "\nshould be \n [4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90]");
-console.log(fullTree.toArrPreorder(), "\nshould be \n [25, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70, 66, 90]");
-console.log(fullTree.toArrPostorder(), "\nshould be \n [4, 12, 10, 18, 24, 22, 15, 31, 44, 35, 66, 90, 70, 50, 25]");
+console.log(fullTree.toArrLevelorder(), "\nshould be \n [25, 15, 50, 10, 22, 35, 70, 4, 12, 18, 24, 31, 44, 66, 90]"); 
