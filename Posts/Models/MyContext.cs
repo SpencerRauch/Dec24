@@ -15,4 +15,5 @@ public class MyContext : DbContext
     public DbSet<Post> Posts { get; set; } 
     public DbSet<User> Users { get; set; } 
     public DbSet<UserPostLike> UserPostLikes { get; set; } 
+    public DbSet<UserPostComment> UserPostComments { get; set; } 
 }

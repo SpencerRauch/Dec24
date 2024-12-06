@@ -1,0 +1,12 @@
+@model UserPostComment
+
+<div class="shadow p-3 mb-3 text-center">
+    <h4>Add A Comment</h4>
+    <form asp-action="NewComment" asp-controller="Comment" method="Post">
+        <input type="hidden" asp-for="PostId" value="@Model.PostId">
+        <label asp-for="Body"></label>
+        <input asp-for="Body">
+        <span class="text-danger" asp-validation-for="Body"></span>
+        <button class="btn btn-primary">Add Comment</button>
+    </form>
+</div>

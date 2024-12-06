@@ -38,6 +38,8 @@ public class PostController : Controller
                                     .Include(p => p.UserLikes)
                                     .ThenInclude(upl => upl.LikingUser)
                                     .Include(p => p.PostingUser)
+                                    .Include(p => p.UserComments)
+                                    .ThenInclude(uc => uc.CommentingUser)
                                     .FirstOrDefault(p => p.PostId == postId);
         if (SinglePost == null)
         {

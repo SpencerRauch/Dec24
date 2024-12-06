@@ -32,3 +32,6 @@
         }
         </div>
     </div>
+
+@await Html.PartialAsync("_NewComment",new UserPostComment(){PostId = Model.PostId})
+@await Html.PartialAsync("_CommentDisplay", Model.UserComments)
