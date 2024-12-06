@@ -237,11 +237,11 @@ class BinarySearchTree {
      */
     toArrInorder(node = this.root, vals = []) {
         //Your code here
-        if (!node) return vals
-        this.toArrInorder(node.left, vals)
+        if (!node) return vals;
+        this.toArrInorder(node.left, vals);
         vals.push(node.data);
-        this.toArrInorder(node.right, vals)
-        return vals
+        this.toArrInorder(node.right, vals);
+        return vals;
     }
 
     /**
@@ -255,11 +255,11 @@ class BinarySearchTree {
      */
     toArrPreorder(node = this.root, vals = []) {
         //Your code here
-        if (!node) return vals
-        vals.push(node.data)
-        this.toArrPreorder(node.left, vals)
-        this.toArrPreorder(node.right, vals)
-        return vals
+        if (!node) return vals;
+        vals.push(node.data);
+        this.toArrPreorder(node.left, vals);
+        this.toArrPreorder(node.right, vals);
+        return vals;
     }
 
 
@@ -274,11 +274,11 @@ class BinarySearchTree {
      */
     toArrPostorder(node = this.root, vals = []) {
         // Your code here 
-        if (!node) return vals
-        this.toArrPostorder(node.left, vals)
-        this.toArrPostorder(node.right, vals)
-        vals.push(node.data)
-        return vals
+        if (!node) return vals;
+        this.toArrPostorder(node.left, vals);
+        this.toArrPostorder(node.right, vals);
+        vals.push(node.data);
+        return vals;
     }
 
 
@@ -291,7 +291,25 @@ class BinarySearchTree {
          * @returns {Array<number>} The data of all nodes in BFS order.
          */
     toArrLevelorder(current = this.root) {
-        //your code here
+        //array to hold values
+        const vals = [];
+        //array to hold next node to process
+        const queue = [];
+
+        //if current node exists, add it to the queue to start 
+        if (current) queue.push(current)
+        
+        //as long as there is a node in the queue
+        while (queue.length > 0) {
+            //pull out the first node
+            let node = queue.shift();
+            //process its data
+            vals.push(node.data);
+            //if it has children, add them to the queue
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+        return vals;
     }
 
 
