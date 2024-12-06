@@ -2,10 +2,15 @@
 
 @foreach (Post p in Model)
 {
+    bool Liked = p.UserLikes.Any(ul => ul.UserId == Context.Session.GetInt32("UserId"));
     <div class="shadow p-3 mb-3 text-center">
         <h3>@p.Title posted by @p.PostingUser?.Name at @p.CreatedAt.ToString("ddd, MMM d") @p.CreatedAt.ToShortTimeString()</h3>
+        <p>@p.UserLikes.Count like(s)</p>
         <div class="d-flex justify-content-center align-items-center gap-1 mt-2">
             <a asp-route-postId="@p.PostId" asp-action="ViewPost" asp-controller="Post" class="btn btn-info">View Post</a>
+            <form asp-route-postId="@p.PostId" asp-action="ToggleLike" asp-controller="Post" method="post">
+                <button class="btn btn-outline-warning">@( Liked ? "Unlike" : "Like")</button>
+            </form>
         </div>
     </div>
 }

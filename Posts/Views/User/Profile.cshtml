@@ -1,6 +1,8 @@
 @model User
 
 <h2>@Model.Name's profile!</h2>
+<p>@Model.Name has liked @Model.PostLikes.Count posts</p>
+<p>@Model.Name's posts have been liked @Model.CreatedPosts.Sum(p => p.UserLikes.Count) times</p>
 @foreach (Post p in Model.CreatedPosts)
 {
         <div class="shadow p-3 mb-3 text-center">

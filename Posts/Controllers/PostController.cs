@@ -22,14 +22,23 @@ public class PostController : Controller
     [HttpGet("posts")]
     public ViewResult AllPosts()
     {
-        List<Post> Posts = _context.Posts.Include(p => p.PostingUser).OrderByDescending(p => p.CreatedAt).Take(100).ToList();
+        List<Post> Posts = _context.Posts
+                                    .Include(p => p.PostingUser)
+                                    .Include(p => p.UserLikes)
+                                    .OrderByDescending(p => p.CreatedAt)
+                                    .Take(100)
+                                    .ToList();
         return View(Posts);
     }
 
     [HttpGet("posts/{postId}")]
     public IActionResult ViewPost(int postId)
     {
-        Post? SinglePost = _context.Posts.FirstOrDefault(p => p.PostId == postId);
+        Post? SinglePost = _context.Posts
+                                    .Include(p => p.UserLikes)
+                                    .ThenInclude(upl => upl.LikingUser)
+                                    .Include(p => p.PostingUser)
+                                    .FirstOrDefault(p => p.PostId == postId);
         if (SinglePost == null)
         {
             return RedirectToAction("AllPosts");
@@ -98,5 +107,25 @@ public class PostController : Controller
         _context.SaveChanges();
         return RedirectToAction("ViewPost", new {postId});
 
+    }
+
+    [HttpPost("posts/{postId}/like")]
+    public IActionResult ToggleLike(int postId)
+    {
+        int UserId = (int)HttpContext.Session.GetInt32("UserId");
+        UserPostLike? existingLike = _context.UserPostLikes.FirstOrDefault(upl => upl.UserId == UserId && upl.PostId == postId);
+        if (existingLike == null)
+        {
+            UserPostLike newLike = new(){UserId=UserId,PostId=postId};
+            _context.Add(newLike);
+        }
+        else 
+        {
+            _context.Remove(existingLike);
+        }
+        _context.SaveChanges();
+        Console.WriteLine(HttpContext.Request.Headers.Referer);
+        
+        return Redirect(HttpContext.Request.Headers.Referer);
     }
 }

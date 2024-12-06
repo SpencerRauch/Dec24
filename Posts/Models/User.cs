@@ -34,6 +34,7 @@ public class User
 
     //nav prop
     public List<Post> CreatedPosts { get;set; } = [];
+    public List<UserPostLike> PostLikes { get;set; } = [];
 }
 
 

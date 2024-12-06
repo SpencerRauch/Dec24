@@ -84,7 +84,11 @@ public class UserController : Controller
     public IActionResult Profile()
     {
         int LoggedId = (int)HttpContext.Session.GetInt32("UserId");
-        User? LoggedUser = _context.Users.Include(u => u.CreatedPosts).FirstOrDefault(u => u.UserId == LoggedId);
+        User? LoggedUser = _context.Users
+                                    .Include(u => u.CreatedPosts)
+                                    .ThenInclude(p => p.UserLikes)
+                                    .Include( u => u.PostLikes)
+                                    .FirstOrDefault(u => u.UserId == LoggedId);
         if (LoggedUser == null)
         {
             return Logout();

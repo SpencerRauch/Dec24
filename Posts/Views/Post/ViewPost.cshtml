@@ -1,15 +1,28 @@
 @{
     int UserId = (int)Context.Session.GetInt32("UserId");
     bool OurPost = UserId == Model.UserId;
+    bool Liked = Model.UserLikes.Any(upl => upl.UserId == UserId);
 }
 
 @model Post
 
     <div class="shadow p-3 mb-3 text-center">
-        <h3>@Model.Title</h3>
+        <h3>@Model.Title by @Model.PostingUser.Name</h3>
         <p>@Model.Body</p>
         <img src="@Model.ImgURL" alt="@Model.Title">
+        <div class="d-flex justify-content-center align-items-top gap-2">
+            <p>@Model.UserLikes.Count likes</p>
+            <ul>
+                @foreach (UserPostLike upl in Model.UserLikes)
+                {
+                    <li>@upl.LikingUser?.Name</li>
+                }
+            </ul>
+        </div>
         <div class="d-flex justify-content-center align-items-center gap-1 mt-2">
+        <form  asp-route-postId="@Model.PostId" asp-action="ToggleLike" asp-controller="Post" method="post">
+            <button class="btn btn-warning">@( Liked ? "Unlike" : "Like")</button>
+        </form>
         @if(OurPost)
         {
             <a asp-action="EditPost" asp-controller="Post" class="btn btn-info" asp-route-postId="@Model.PostId">Edit</a>
