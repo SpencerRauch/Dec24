@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Empty";
+    int? UserId = Context.Session.GetInt32("UserId");
+    bool LoggedIn = UserId != null;
+}
+
+<div class="text-center">
+    <h1>Welcome to the site!</h1>
+    <div class="row">
+        @await Html.PartialAsync("_Register", new User()) @* Explicitly passing model to show you you can*@
+        @await Html.PartialAsync("_Login")
+    </div>
+
+</div>
