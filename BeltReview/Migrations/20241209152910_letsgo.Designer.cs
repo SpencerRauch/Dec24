@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BeltReview.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20241007140547_LoginSetUp")]
-    partial class LoginSetUp
+    [Migration("20241209152910_letsgo")]
+    partial class letsgo
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

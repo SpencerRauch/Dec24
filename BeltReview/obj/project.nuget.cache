@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8Xa/WD8kvplMaXA9SoxTyZr6w2ZVZZ1Dh5hhw24p5JtdbrgC9Kn/Z5WyBlqq90SYAgNsrB2y/zLQclDyOoyYzQ==",
+  "dgSpecHash": "banPds+migNJWZjn6gu7mduhtK+LMONzWjp1ezg+/ETB01OEmdexfYTogp3zBZ4FTaHAOC+spdThozTEXXOOUg==",
   "success": true,
-  "projectFilePath": "C:\\stacks\\CSharp\\Oct24\\BeltReview\\BeltReview.csproj",
+  "projectFilePath": "C:\\stacks\\CSharp\\Dec24\\BeltReview\\BeltReview.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bizar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\bizar\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

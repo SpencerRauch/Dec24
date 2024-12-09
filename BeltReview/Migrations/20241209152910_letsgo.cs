@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BeltReview.Migrations
 {
     /// <inheritdoc />
-    public partial class LoginSetUp : Migration
+    public partial class letsgo : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
