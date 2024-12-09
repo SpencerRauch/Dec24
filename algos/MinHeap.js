@@ -55,7 +55,26 @@ class MinHeap {
      * @param {number} num The num to add.
      */
     insert(num) { 
-        //your code here
+        //add item to heap
+        this.heap.push(num)
+
+        // get index of newly added value
+        let currentIdx = this.heap.length-1;
+        // get index of newly added value's parent
+        let parentIdx = this.idxOfParent(currentIdx);
+
+        //while the parent is within the heap and the child is smaller
+        while(parentIdx >= 1 && this.heap[currentIdx] < this.heap[parentIdx]){
+            //swap child and parent
+            let temp = this.heap[currentIdx]
+            this.heap[currentIdx] = this.heap[parentIdx]
+            this.heap[parentIdx] = temp
+
+            //reset to check swapped value against new parent
+            currentIdx = parentIdx
+            parentIdx = this.idxOfParent(currentIdx)
+        }
+        return this
     }
 
     /**
@@ -90,4 +109,6 @@ testHeap.insert(7);
 testHeap.printHorizontalTree();
 console.log("\n\n********\n\n")
 testHeap.insert(3);
+testHeap.printHorizontalTree();
+testHeap.insert(1);
 testHeap.printHorizontalTree();
