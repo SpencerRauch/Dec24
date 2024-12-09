@@ -42,6 +42,7 @@ class MinHeap {
      */
     top() { 
         //your code here 
+        return this.heap[1] ? this.heap[1] : null
     }
 
     /**
