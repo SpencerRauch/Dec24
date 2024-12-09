@@ -19334,6 +19334,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\stacks\\CSharp\\Dec24\\BeltReview\\Views\\Sighting\\NewSighting.cshtml",
+      "TargetPath": "Views\\Sighting\\NewSighting.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\stacks\\CSharp\\Dec24\\BeltReview\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -19359,6 +19364,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\stacks\\CSharp\\Dec24\\BeltReview\\Views\\Sighting\\Dashboard.cshtml",
+      "TargetPath": "Views\\Sighting\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\stacks\\CSharp\\Dec24\\BeltReview\\Views\\User\\_Login.cshtml",
       "TargetPath": "Views\\User\\_Login.cshtml",
       "FileKind": "mvc"
@@ -19376,6 +19386,11 @@
     {
       "FilePath": "c:\\stacks\\CSharp\\Dec24\\BeltReview\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\stacks\\CSharp\\Dec24\\BeltReview\\Views\\Sighting\\ViewSighting.cshtml",
+      "TargetPath": "Views\\Sighting\\ViewSighting.cshtml",
       "FileKind": "mvc"
     },
     {

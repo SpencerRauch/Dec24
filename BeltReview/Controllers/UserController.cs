@@ -42,7 +42,8 @@ public class UserController : Controller
         _context.SaveChanges();
 
         HttpContext.Session.SetInt32("UserId", newUser.UserId);
-        return RedirectToAction("Success"); // ! TODO UPDATE TO DASHBOARD OF WIREFRAME
+        HttpContext.Session.SetString("Username", newUser.Name);
+        return RedirectToAction("Dashboard","Sighting"); // ! TODO UPDATE TO DASHBOARD OF WIREFRAME
 
     }
 
@@ -67,7 +68,8 @@ public class UserController : Controller
             return View("Index");
         }
         HttpContext.Session.SetInt32("UserId",dbUser.UserId);
-        return RedirectToAction("Success"); // ! TODO UPDATE TO DASHBOARD OF WIREFRAME
+        HttpContext.Session.SetString("Username",dbUser.Name);
+        return RedirectToAction("Dashboard","Sighting"); // ! TODO UPDATE TO DASHBOARD OF WIREFRAME
     }
 
     [HttpPost("user/logout")]

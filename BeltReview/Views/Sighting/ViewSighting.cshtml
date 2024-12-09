@@ -1,0 +1,19 @@
+@model Sighting
+<div class="row">
+    <div class="col-6">
+        <h1>@Model.Title</h1>
+        <p>Reported by @Model.ReportingUser?.Name</p>
+        <p>Date: @Model.Date.ToString("MMM dd, yyyy")</p>
+        <p>Description:</p>
+        <p>@Model.Description</p>
+    </div>
+    <div class="col-6">
+        <p>Believed By</p>
+        <ul class="border list-unstyled p-3">
+            @foreach (UserSightingBelief usb in Model.UserBeliefs)
+            {
+                <li>@usb.BelievingUser?.Name</li>
+            }
+        </ul>
+    </div>
+</div>
