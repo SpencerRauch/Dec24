@@ -10,6 +10,9 @@
     <div class="col-6">
         <p>Believed By</p>
         <ul class="border list-unstyled p-3">
+            @if(Model.UserBeliefs.Count == 0){
+                <li>No one believes this story yet</li>
+            }
             @foreach (UserSightingBelief usb in Model.UserBeliefs)
             {
                 <li>@usb.BelievingUser?.Name</li>

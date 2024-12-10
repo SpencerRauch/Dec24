@@ -33,7 +33,7 @@ public class User
     public string ConfirmPassword { get; set; }
 
     //navprop
-    public List<Sighting> ReportedSightings { get;set; } = [];
+    public List<Sighting> ReportedSightings { get;set; } =[];
     public List<UserSightingBelief> SightingBeliefs { get;set; } = [];
 }
 

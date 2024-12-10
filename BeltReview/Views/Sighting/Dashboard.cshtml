@@ -1,3 +1,6 @@
+@{
+    int LoggedId = (int)Context.Session.GetInt32("UserId");
+}
 @model List<Sighting>
 
 
@@ -19,12 +22,25 @@
     <tbody>
         @foreach(Sighting s in Model)
         {
+            bool OurSighting = s.UserId == LoggedId;
+            bool Believed = s.UserBeliefs.Any(ub => ub.UserId == LoggedId);
             <tr>
                 <td><a asp-action="ViewSighting" asp-controller="Sighting" asp-route-sightingId="@s.SightingId">@s.Title</a></td>
                 <td>@s.ReportingUser?.Name</td>
                 <td>@s.Date.ToString("MMM d yyy")</td>
                 <td>@s.UserBeliefs?.Count</td>
-                <td>TBD</td>
+                <td>
+                    @if(OurSighting)
+                    {
+                        <form asp-route-sightingId="@s.SightingId" asp-action="DeleteSighting" asp-controller="Sighting" method="post">
+                            <button class="btn btn-danger">Recant</button>
+                        </form>
+                    } else {
+                        <form asp-action="ToggleBelief" asp-controller="Sighting" asp-route-sightingId="@s.SightingId" method="Post">
+                            <button class="btn btn-info">@(Believed?"Fake news":"So True")</button>
+                        </form>
+                    }
+                </td>
             </tr>
         }
     </tbody>
