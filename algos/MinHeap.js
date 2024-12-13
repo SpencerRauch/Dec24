@@ -108,7 +108,46 @@ class MinHeap {
      * @returns {?number} The min number or null if empty.
     */
     extract() { 
-        //your code here
+
+            if (this.heap.length == 1) return null;
+            if (this.heap.length == 2) return this.heap.pop()
+
+            // store min for return
+            let min = this.heap[1]
+            
+            // pop last item off and overwrite the previous minimum
+            let lastItem = this.heap.pop()
+            this.heap[1] = lastItem
+            
+            //initializing parent, left and right
+            let parent = 1;
+            let left = 2;
+            let right = 3;
+            
+            //as along as left is less than the length, we have at least one child to look at it still
+            while(left < this.heap.length){
+                //determine which child holds a smaller value (make sure right is in bounds)
+                let smaller = left;
+                if (right < this.heap.length && this.heap[right] < this.heap[left]){
+                    smaller = right
+                }
+
+                //if the smaller value is smaller than the current parent..
+                if (this.heap[smaller] < this.heap[parent]){
+                    //perform swap
+                    let temp = this.heap[parent]
+                    this.heap[parent] = this.heap[smaller]
+                    this.heap[smaller] = temp
+                    //reset variables for next iteration
+                    parent = smaller
+                    left = this.idxOfLeftChild(parent)
+                    right = this.idxOfRightChild(parent)
+                } else {
+                    break; //if no swap was performed, we're done shifting down
+                }
+            }
+            //return the extracted value
+            return min
     }
 }
 
