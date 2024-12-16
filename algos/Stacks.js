@@ -98,6 +98,7 @@ class LinkedListStack {
     }
 
     peek() {
+        if (this.head == null) return null
         return this.head.data;
     }
 
