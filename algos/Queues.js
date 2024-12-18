@@ -191,6 +191,20 @@ class LinkedListQueue {
 
 function CompareQueues(qOne, qTwo) {
     //Your code here
+    if (qOne.len() !== qTwo.len()) return false
+    let equal = true;
+    for (let i = 0; i < qOne.len(); i++){
+        let one = qOne.dequeue()
+        let two = qTwo.dequeue()
+
+        if (one !== two){
+            equal = false;
+        }
+
+        qOne.enqueue(one);
+        qTwo.enqueue(two)
+    }
+    return equal
 }
 
 
