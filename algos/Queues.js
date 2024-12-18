@@ -95,7 +95,7 @@ class LinkedListQueue {
      * @returns {number} The length.
      */
     len() {
-        //your code here
+        return this.size;
     }
 
     /**
@@ -104,7 +104,7 @@ class LinkedListQueue {
      * @returns {boolean} Indicates if the list is empty.
      */
     isEmpty() {
-        //your code here
+        return this.size === 0;
     }
 
     /**
@@ -115,7 +115,17 @@ class LinkedListQueue {
      * @returns {number} The new size of the queue.
      */
     enqueue(val) {
-        //your code here
+        const newTail = new QueueNode(val);
+
+        if (this.isEmpty()) {
+            this.head = newTail;
+            this.tail = newTail;
+        } else {
+            this.tail.next = newTail;
+            this.tail = newTail;
+        }
+        this.size++;
+        return this.size;
     }
 
     /**
@@ -124,7 +134,19 @@ class LinkedListQueue {
      * @returns {any} The removed item.
      */
     dequeue() {
-        //your code here
+        if (!this.head) {
+            return null;
+        }
+
+        const dequeued = this.head;
+        this.head = this.head.next;
+
+        if (this.head === null) {
+            this.tail = null;
+        }
+
+        this.size--;
+        return dequeued.data;
     }
 
     /**
@@ -134,7 +156,7 @@ class LinkedListQueue {
      * @returns {any} The first item.
      */
     front() {
-        //your code here
+        return this.head ? this.head.data : null;
     }
 
 
@@ -162,10 +184,29 @@ class LinkedListQueue {
 
 }
 
-const arrayQueue = new Queue();
-arrayQueue.items = [1, 2, 9, 3, 3, 6];
-arrayQueue.print();
+//Returns boolean whether queues are same length with same elements
+//Use only methods from Queue classes, do not directly alter linked list or array
+//No extra arrays / objects / etc
+// ----> The queues should be in the same order when you're done! <----
+
+function CompareQueues(qOne, qTwo) {
+    //Your code here
+}
+
+
+const arrayQueueOne = new Queue();
+arrayQueueOne.items = [1, 2, 9, 3, 3, 6];
+// arrayQueueOne.print();
+
+const arrayQueueTwo = new Queue();
+arrayQueueTwo.items = [7,7,7,7];
+// arrayQueueTwo.print();
 
 const listQueue = new LinkedListQueue();
-listQueue.seed([1, 2, 3, 4, 5, 6, 7]);
+listQueue.seed([1, 2, 9, 3, 3, 6]);
 listQueue.print();
+
+console.log(CompareQueues(arrayQueueOne,listQueue)) // true
+arrayQueueOne.print();
+console.log(CompareQueues(arrayQueueTwo, listQueue)) // false
+arrayQueueTwo.print();
