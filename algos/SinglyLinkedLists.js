@@ -228,6 +228,7 @@ class SinglyLinkedList {
     */
     reverse() {
        //your code here
+       return this
     }
 
 }
