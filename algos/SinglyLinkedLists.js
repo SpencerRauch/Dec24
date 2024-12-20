@@ -227,8 +227,8 @@ class SinglyLinkedList {
     * @returns {SinglyLinkedList} This list.
     */
     reverse() {
-       //your code here
-       return this
+        //your code here
+        return this
     }
 
 }
