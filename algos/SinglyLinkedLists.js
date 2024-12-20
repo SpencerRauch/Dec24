@@ -219,17 +219,23 @@ class SinglyLinkedList {
         }
         return false
     }
+
+    /**
+    * Reverses this list in-place without using any extra lists.
+    * - Time: (?).
+    * - Space: (?).
+    * @returns {SinglyLinkedList} This list.
+    */
+    reverse() {
+       //your code here
+    }
+
 }
 
-const emptyList = new SinglyLinkedList();
-const testList = new SinglyLinkedList();
-testList.insertAtBackMany([10, 8, 12, 5, 15]);
 
-// ! second to last test:
-console.log(testList.secondToLast()) //should be 5
+const reverseMe = new SinglyLinkedList().insertAtBackMany(['o','l','l','e','h'])
 
-// ! remove val test:
-testList.removeVal(8);
-testList.removeVal(15);
-testList.removeVal(10);
-console.log(testList.toArr()) // should be [12,5]
+
+//reverse:
+console.log(reverseMe.reverse().toArr());
+//[ 'h', 'e', 'l', 'l', 'o' ]
